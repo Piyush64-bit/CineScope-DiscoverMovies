@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+  
+  /* Prevent horizontal scroll from animated elements */
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-netflix-red hover:bg-netflix-red-dark text-netflix-white font-medium px-6 py-3 rounded transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-netflix-red/20;
+  }
+  
+  .btn-secondary {
+    @apply bg-netflix-gray-medium hover:bg-netflix-gray-light/20 text-netflix-white font-medium px-6 py-3 rounded transition-all duration-200 transform hover:scale-105 active:scale-95 border border-netflix-gray-medium hover:border-netflix-gray-light;
+  }
+  
+  .card {
+    @apply bg-netflix-gray-dark/80 backdrop-blur-sm border border-netflix-gray-medium/50 rounded-lg p-6 transition-all duration-300 hover:border-netflix-red/50 hover:shadow-xl hover:shadow-netflix-red/10 hover:bg-netflix-gray-dark/90;
+  }
+  
+  .input-field {
+    @apply w-full bg-netflix-gray-medium/80 backdrop-blur-sm border border-netflix-gray-light/30 rounded px-4 py-3 text-netflix-white placeholder-netflix-gray-light focus:outline-none focus:border-netflix-red focus:ring-2 focus:ring-netflix-red/20 transition-all duration-200;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-netflix-red to-netflix-red-light bg-clip-text text-transparent;
+  }
+  
+  .loading-dots {
+    @apply inline-flex space-x-1;
+  }
+  
+  .loading-dots > div {
+    @apply w-2 h-2 bg-netflix-red rounded-full animate-bounce;
+    animation-delay: calc(var(--i) * 0.1s);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2F2F2F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
+
+/* Smooth animations for better performance */
+* {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Ensure animated elements don't cause layout shifts */
+.fixed {
+  will-change: transform;
+}
