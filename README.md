@@ -12,8 +12,6 @@
 
 Built for movie buffs, casual watchers, and anyone who's ever spent 30 minutes scrolling Netflix without picking anything. CineScope is your new best friend for finding that perfect movie for tonight's vibe check! 
 
-![CineScope Preview](https://images.unsplash.com/photo-1489599904809-0d0ca3ade5b0?w=1200&h=600&fit=crop)
-
 ## 🚀 [Live Demo](https://cinescope64.netlify.app) | 📱 Try it now!
 
 ## ✨ Why CineScope Hits Different
